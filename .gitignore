@@ -1,2 +1,15 @@
 #Node Modules
-node_modules
+.node_modules
+
+### STS ###
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

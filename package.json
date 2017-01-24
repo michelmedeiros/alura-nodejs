@@ -1,0 +1,25 @@
+{
+  "name": "alura-nodejs",
+  "version": "1.0.0",
+  "description": "Curso de aprendizado NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelmedeiros/alura-nodejs.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Michel Medeiros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelmedeiros/alura-nodejs/issues"
+  },
+  "homepage": "https://github.com/michelmedeiros/alura-nodejs#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

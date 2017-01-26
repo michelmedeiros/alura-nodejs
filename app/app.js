@@ -1,14 +1,7 @@
-var express = require('express');
-var app = express();
-
-app.get('/produtos', function(req, res) {
-	res.send("<html><body><h1>Listagem de produtos</h1></body></html>")
-});
+var app = require('./config/express')();
+//var mongoose = require('./config/mongoose')();
+var rotaProdutos  = require('./routes/produtos')(app);
 
 app.listen(3000, function() {
 	console.log("Servidor em execução...")
 });
-
-
-
-

@@ -1,2 +1,2 @@
 # alura-nodejs
-Projeto de estudo Stack MEAN
+Projeto de estudo NodeJS

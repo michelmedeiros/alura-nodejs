@@ -1,10 +1,11 @@
-var mongoose     = require('mongoose');
-var Schema       = mongoose.Schema;
+var db = require('../infra/mongoose')();
+var Schema       = db.Schema;
 
 var LivroSchema = new Schema({
+    _id: String,	
     titulo: String,
     descricao: String,
     preco: String
 });
 
-module.exports = mongoose.model('Livros', LivroSchema);
+module.exports = db.model('Livros', LivroSchema);

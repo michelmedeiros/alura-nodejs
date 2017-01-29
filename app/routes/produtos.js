@@ -5,10 +5,15 @@ module.exports = function(app) {
     Livros.find(function(err, livros) {
       if (err)
         res.send(err);
-      //res.json(bears);
-      res.render('produtos/lista', {
-        lista: livros
+      res.format({
+          html: function() {
+            res.render('produtos/lista', {lista: livros});
+          },
+          json: function() {
+            res.json(livros);
+          }
       });
+      
     });
   });
 

@@ -13,6 +13,12 @@
                     <td><%=lista[i].titulo%></td>
                     <td><%=lista[i].descricao%></td>
                     <td><%=lista[i].preco%></td>
+                    <td>
+                        <form action="/api/produtos?_method=DELETE" method="post">
+                            <input type="hidden" name="id" value="<%= lista[i].id %>" />
+                            <input type="submit" value="Apaga" />
+                        </form>
+                    </td>                    
                 </tr>
             <%}%>
             <tr>

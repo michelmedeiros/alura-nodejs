@@ -16,8 +16,9 @@ module.exports = function(app) {
     res.render('produtos/form');
   });
 
-  app.get('/api/produtos/remove/:id', function(req, res, next) {
-    Livros.findById(req.params.id, function (err, livro) {
+  app.delete('/api/produtos', function(req, res, next) {
+    var id = req.body.id;
+    Livros.findById(id, function (err, livro) {
       if(err) { return next(err); }
       if(!livro) { return res.send(404); }
       livro.remove(function(err) {
@@ -28,7 +29,7 @@ module.exports = function(app) {
     });
   });
 
-  app.post('/api/produtos/salva', function(req, res) {
+  app.post('/api/produtos', function(req, res) {
     var livro = req.body;
     console.log('Título: ' + livro.titulo);
     console.log('Descrição: ' + livro.descricao);

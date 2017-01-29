@@ -12,6 +12,10 @@ module.exports = function(app) {
     });
   });
 
+  app.get('/api/produtos/form', function(req, res) {
+    res.render('produtos/form');
+  });
+
   app.get('/api/produtos/remove/:id', function(req, res, next) {
     Livros.findById(req.params.id, function (err, livro) {
       if(err) { return next(err); }
@@ -23,5 +27,20 @@ module.exports = function(app) {
       });
     });
   });
+
+  app.post('/api/produtos/salva', function(req, res) {
+    var livro = req.body;
+    console.log('Título: ' + livro.titulo);
+    console.log('Descrição: ' + livro.descricao);
+    console.log('Preço: ' + livro.preco);
+    Livros.create(livro, function(err, livros) {
+       if(err) res.send(err);
+       console.log('INSERT novo livro: ' + livro.titulo);
+       return  res.redirect('/api/produtos');
+    });
+  });
+
+
+
 }
 

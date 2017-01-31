@@ -4,6 +4,7 @@ var express = require("express"); // call express
 var bodyParser = require("body-parser");
 var load = require("express-load");
 var methodOverride = require('method-override');
+var expressValidator = require('express-validator');
 
 
 module.exports = function() {
@@ -16,6 +17,7 @@ module.exports = function() {
     }));
     app.use(bodyParser.json());
     app.use(methodOverride('_method'));
+    app.use(expressValidator());
     app.set('view engine', 'ejs');
     app.set('views', '../app/views');
     

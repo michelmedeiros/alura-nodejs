@@ -20,7 +20,7 @@ module.exports = function() {
     app.use(expressValidator());
     app.set('view engine', 'ejs');
     app.set('views', '../app/views');
-    
+
     load('routes').then('models').into(app);
 
     return app;

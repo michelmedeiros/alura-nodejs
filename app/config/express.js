@@ -18,6 +18,7 @@ module.exports = function() {
     app.use(bodyParser.json());
     app.use(methodOverride('_method'));
     app.use(expressValidator());
+    app.use(express.static('../public'));
     app.set('view engine', 'ejs');
     app.set('views', '../app/views');
 

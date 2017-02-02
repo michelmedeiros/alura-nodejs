@@ -9,7 +9,7 @@ module.exports = function(app) {
       res.format({
         html: function() {
           res.render('home/index', {
-            lista: livros
+            livros: livros
           });
         },
         json: function() {

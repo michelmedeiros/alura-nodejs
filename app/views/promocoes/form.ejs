@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promoções</title>
+    <form name="promocoes" action="/api/promocoes" method="post">
+        <div>
+            <input type="text" name="mensagem"/>
+        </div>
+        <div>
+            <select name="livro[id]">
+                <%for(var i=0; i<livros.length;i++){%>
+                    <option value="<%=livros[i].id%>"><%=livros[i].titulo%></option>
+                <%}%>
+            </select>
+            <input type="submit" name="btnPromocoes" value="Cadastrar Promoção">
+        </div>
+
+    </form>
+</head>
+<body>
+
+</body>
+</html>
+

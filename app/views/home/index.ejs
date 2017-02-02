@@ -1,4 +1,4 @@
-<html ng-app="cdcApp">
+<html>
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -248,13 +248,15 @@
         </div>
     </div>
 </footer>
+
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var socket = io();
     socket.on('novaPromocao', function (data) {
-        //document.location.href= "/produtos/"+data.livro.id+"?promocao="+data.mensagem;
-        console.log(data.livro);
+        alert ('teste');
+        console.log(data.mensagem);
     });
 </script>
+
 </body>
 </html>

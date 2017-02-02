@@ -1,0 +1,10 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost');
+  socket.on('news', function (data) {
+    console.log(data);
+    alert("Data 1" + data);
+    socket.emit('my other event', { my: 'data' });
+    alert("Data2 " + data);
+  });
+</script>

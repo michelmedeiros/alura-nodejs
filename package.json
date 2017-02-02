@@ -27,7 +27,8 @@
     "express-validator": "^3.1.2",
     "method-override": "^2.3.7",
     "mongoose": "^4.8.1",
-    "mpromise": "^0.5.5"
+    "mpromise": "^0.5.5",
+    "socket.io": "^1.7.2"
   },
   "devDependencies": {
     "mocha": "^3.2.0",

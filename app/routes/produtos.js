@@ -3,7 +3,7 @@ var Livros = require('../models/livro');
 module.exports = function(app) {
   app.get('/api/produtos', function(req, res, next) {
     Livros.find(function(err, livros) {
-      if (err){
+      if (err) {
         return next(err);
       }
       res.format({

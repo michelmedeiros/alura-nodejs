@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Testando aplicação</title>
+<html ng-app="cdcApp">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link rel="icon"
-          href="https://www.caelum.com.br/apostila-java-web/anuncios/casa-do-codigo_2x.png"
+          href="//cdn.shopify.com/s/files/1/0155/7645/t/177/assets/favicon.ico?11981592617154272979"
           type="image/ico"/>
     <link href="https://plus.googlecom/108540024862647200608"
           rel="publisher"/>
@@ -17,9 +15,6 @@
           rel="stylesheet" type="text/css" media="all"/>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
           rel='stylesheet'/>
-    <link
-            href="/css/site/fonts.css"
-            rel="stylesheet" type="text/css" media="all"/>
     <link
             href="/css/site/fontello-ie7.css"
             rel="stylesheet" type="text/css" media="all"/>
@@ -45,32 +40,6 @@
     <link href="/css/site/book-collection.css"
           rel="stylesheet" type="text/css" media="all"/>
 </head>
-<body class="home">
-<header id="layout-header">
-    <div class="clearfix container">
-        <a href="/" id="logo">
-            <img src="https://tendocuriosidades.files.wordpress.com/2015/03/9adf6-cdc-logo-novo-600.png" alt="Casa do Codigo">
-        </a>
-
-        <div id="header-content">
-            <nav id="main-nav">
-
-                <ul class="clearfix">
-                    <li><a href="/cart" rel="nofollow">Seu carrinho</a></li>
-
-                    <li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre</a></li>
-
-                    <li><a href="/pages/perguntas-frequentes" rel="nofollow">Perguntas</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-</body>
-</html>
-
-
-<!--
 <body class="home">
 
 <header id="layout-header">
@@ -112,6 +81,7 @@
     </ul>
 </nav>
 
+<!-- inicio da listagem em si-->
 <section id="index-section" class="container middle" ng-controller="HomeController">
 
     <ul id="home-highlight-collection">
@@ -192,12 +162,14 @@
 
 </section>
 
+<!-- fim-->
 
 <footer id="layout-footer">
     <div class="clearfix container">
 
 
         <div id="collections-footer">
+            <!-- cdc-footer -->
             <p class="footer-title">Coleções de Programação</p>
             <ul class="footer-text-links">
                 <li><a href="/collections/livros-de-java">Java</a></li>
@@ -214,6 +186,7 @@
             </ul>
         </div>
         <div id="social-footer">
+            <!-- books-footer -->
             <p class="footer-title">Links da Casa do Código</p>
             <ul class="footer-text-links">
                 <li><a href="http://livros.casadocodigo.com.br" rel="nofollow">Meus
@@ -240,6 +213,7 @@
             </ul>
         </div>
         <div id="newsletter-footer">
+            <!-- social-footer -->
             <p class="footer-title">Receba as Novidades e Lançamentos</p>
 
             <div id="form-newsletter">
@@ -261,30 +235,8 @@
                                 rel="nofollow">Receba as Novidades e Lançamentos</a></li>
                 </ul>
             </div>
-            <ul class="footer-payments">
-                <li><img class="accepts-paypal"
-                         src="https://cdn.shopify.com/s/files/1/0155/7645/t/177/assets/accepts_paypal.png?11981592617154272979"
-                         border="0" alt="Paypal" width="130" height="80"/></li>
-                <li><img class="accepts-pagseguro"
-                         src="https://cdn.shopify.com/s/files/1/0155/7645/t/177/assets/logopagseguro.png?11981592617154272979"
-                         border="0" alt="PagSeguro" width="180" height="26"/></li>
-            </ul>
         </div>
     </div>
 </footer>
-
-<script src="/socket.io/socket.io.js"></script>
-<script>
-    var socket = io();
-    socket.on('novaPromocao', function (data) {
-        alert ('teste');
-        console.log(data.mensagem);
-    });
-</script>
-
 </body>
 </html>
-
--->
-
-

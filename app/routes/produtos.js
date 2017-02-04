@@ -1,7 +1,7 @@
 var Livros = require('../models/livro');
 
 module.exports = function(app) {
-  app.get('/api/produtos', function(req, res, next) {
+  app.get('/produtos', function(req, res, next) {
     Livros.find(function(err, livros) {
       if (err) {
         return next(err);
@@ -19,14 +19,14 @@ module.exports = function(app) {
     });
   });
 
-  app.get('/api/produtos/form', function(req, res) {
+  app.get('/produtos/form', function(req, res) {
     res.render('produtos/form', {
       errosValidacao: {},
       livro: {}
     });
   });
 
-  app.delete('/api/produtos', function(req, res, next) {
+  app.delete('/produtos', function(req, res, next) {
     var id = req.body.id;
     Livros.findById(id, function(err, livro) {
       if (err) {
@@ -40,12 +40,12 @@ module.exports = function(app) {
           return handleError(res, err);
         }
         console.log('DELETE removing ID: ' + livro._id);
-        return res.redirect('/api/produtos');
+        return res.redirect('/produtos');
       });
     });
   });
 
-  app.post('/api/produtos', function(req, res) {
+  app.post('/produtos', function(req, res) {
     var livro = req.body;
     req.assert('titulo', 'Título é obrigatório').notEmpty();
     req.assert('preco', 'Preço é um número').isFloat();

@@ -7,7 +7,8 @@ var methodOverride = require('method-override');
 module.exports = function() {
 
     var app = express();
-    app.use(express.static('./public'));
+    // app.use(express.static('./public'));
+    app.use(express.static(__dirname + '/public'));
     app.set('view engine', 'ejs');
     app.set('views', './app/views');
 
@@ -25,12 +26,13 @@ module.exports = function() {
         .then('models')
         .into(app);
 
-    // app.use(function(req, res, next) {
-    //     res.status(404).render("erros/404");
-    // });
+    app.use(function(req, res, next) {
+        res.status(404).render("erros/404");
+    });
 
-    // app.use(function(error, req, res, next) {
-    //     res.status(500).render("erros/500");
-    // });
+    app.use(function(error, req, res, next) {
+        res.status(500).render("erros/500");
+    });
+
     return app;
 };

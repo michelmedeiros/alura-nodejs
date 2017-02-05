@@ -70,7 +70,7 @@ module.exports = function(app) {
     Livros.create(livro, function(err, livros) {
       if (err) res.send(err);
       console.log('INSERT novo livro: ' + livro.titulo);
-      return res.redirect('/api/produtos');
+      return res.redirect('/produtos');
     });
   });
 
